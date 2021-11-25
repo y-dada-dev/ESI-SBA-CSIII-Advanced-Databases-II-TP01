@@ -1,0 +1,36 @@
+hdouo tp commande 
+docker pull liliasfaxi/spark-hadoop:hv-2.7.2
+Étape 1 : Créer un réseau bridge nommé "hadoop"
+docker network create --driver bridge hadoop
+Étape 2 : Créer et lancer les trois conteneurs
+# Créer et lancer le conteneur hadoop-master
+docker run -itd --name hadoop-master --network hadoop -p 50070:50070 -p 8088:8088 -p 16010:16010 liliasfaxi/spark-hadoop:hv-2.7.2
+
+docker run -itd -p 8040:8042 --net-hadoop --name hadoop-slave1 -hostname hadoop-slave1 liliasfaxi/spark-hadoop:hv-2.7.2
+docker run -itd -p 8041:8042 --net-hadoop --name hadoop-slave1 -hostname hadoop-slave1 liliasfaxi/spark-hadoop:hv-2.7.2
+
+# Créer et lancer le conteneur hadoop-slave1
+docker run -itd --name hadoop-slave1 --network hadoop -p 8042:8042 liliasfaxi/spark-hadoop:hv-2.7.2
+
+# Créer et lancer le conteneur hadoop-slave2
+docker run -itd --name hadoop-slave2 --network hadoop -p 8042:8042 liliasfaxi/spark-hadoop:hv-2.7.2
+
+Étape 3 : Entrer dans le conteneur hadoop-master
+docker exec -it hadoop-master bash
+
+our lancer Hadoop et YARN à l'intérieur du conteneur "namenode" (hadoop-master
+docker exec -it hadoop-master bash
+cd /path/to/your/script/directory
+./start-hadoop.sh
+
+Créer un répertoire dans HDFS appelé "input" :
+
+hadoop fs -mkdir /input
+hadoop fs -copyFromLocal purchases.txt /input/
+hadoop fs -ls /input
+hadoop fs -tail /input/purchases.txt
+
+
+
+find / -name 'slaves'
+
