@@ -14,7 +14,7 @@
 ![image](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![image](https://img.shields.io/badge/SparkSQL-39457E?style=for-the-badge&logo=logoColor=white)
 ![image](https://img.shields.io/badge/SparkMlib-CC342D?style=for-the-badge&logo=logoColor=white)
-![image](https://img.shields.io/badge/GraphFrames%20GraphQL-311C87?&style=for-the-badge&logo=logoColor=white)
+![image](https://img.shields.io/badge/GraphFrames-311C87?&style=for-the-badge&logo=logoColor=white)
 ![image](https://img.shields.io/badge/SparkGraphX-F02E65?style=for-the-badge&logo=logoColor=black)
 ![image](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)
 ![image](https://img.shields.io/badge/KSQLdb-232326?style=for-the-badge&logo=logoColor=white)
